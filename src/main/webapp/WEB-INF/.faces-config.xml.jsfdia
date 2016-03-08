@@ -19,14 +19,26 @@
  </PROCESS-ITEM>
  <PROCESS-ITEM NAME="rules:#views#inbox.jsf" PATH="/views/inbox.jsf"
   SHAPE="256,145,0,0" model-entity="JSFProcessGroup"/>
- <PROCESS-ITEM NAME="rules:#getsymbol.xhtml" PATH="/getsymbol.xhtml"
-  SHAPE="32,385,0,0" model-entity="JSFProcessGroup">
-  <PROCESS-ITEM ID="rules:#getsymbol.xhtml:0" NAME="item"
-   PATH="/getsymbol.xhtml" model-entity="JSFProcessItem">
-   <PROCESS-ITEM-OUTPUT ID="ok::#stockvalue.xhtml" NAME="output"
-    PATH="/stockvalue.xhtml" TARGET="rules:#stockvalue.xhtml" TITLE="ok" model-entity="JSFProcessItemOutput"/>
+ <PROCESS-ITEM NAME="rules:#stock#getsymbol.xhtml"
+  PATH="/stock/getsymbol.xhtml" SHAPE="32,385,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#stock#getsymbol.xhtml:0" NAME="item"
+   PATH="/stock/getsymbol.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="ok::#stock#stockvalue.xhtml" NAME="output"
+    PATH="/stock/stockvalue.xhtml"
+    TARGET="rules:#stock#stockvalue.xhtml" TITLE="ok" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
- <PROCESS-ITEM NAME="rules:#stockvalue.xhtml" PATH="/stockvalue.xhtml"
-  SHAPE="240,401,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#stock#stockvalue.xhtml"
+  PATH="/stock/stockvalue.xhtml" SHAPE="240,401,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#postage#getrequest.xhtml"
+  PATH="/postage/getrequest.xhtml" SHAPE="32,497,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#postage#getrequest.xhtml:0" NAME="item"
+   PATH="/postage/getrequest.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="ok::#postage#showpostage.xhtml"
+    NAME="output" PATH="/postage/showpostage.xhtml"
+    TARGET="rules:#postage#showpostage.xhtml" TITLE="ok" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#postage#showpostage.xhtml"
+  PATH="/postage/showpostage.xhtml" SHAPE="240,513,0,0" model-entity="JSFProcessGroup"/>
 </PROCESS>

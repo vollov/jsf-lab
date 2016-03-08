@@ -24,7 +24,7 @@ public class StockService {
     }
 
     public int getStockValue(QuoteRequest r) {
-    	return 1;
-//        return Math.abs((r.getSym() + r.getQuoteDate().toString()).hashCode());
+    	//return 1;
+        return Math.abs((r.getSym() + r.getQuoteDate().toString()).hashCode());
     }
 }

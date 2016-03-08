@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core" xmlns:x="http://foo.com">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style type="text/css">
+li.c1 {
+	color: red
+}
+
+span.c1 {
+	color: red
+}
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+<!-- h:messages errorClass="c1" /> -->
+<h:form id="f">
+    <h:panelGrid columns="2">
+        <h:outputText value="Weight:" />
+        <h:panelGroup>
+        	<!-- validatorMessage="weight cannot be negative!" -->
+            <h:inputText id="w" value="#{r.weight}" label="weight"
+                required="true">
+                <f:validateLongRange minimum="0" />
+            </h:inputText>
+            <h:message for="w" errorClass="c1" />
+        </h:panelGroup>
+        <h:outputText value="Patron code:" />
+        
+        <h:panelGroup>
+        <h:inputText id="p" value="#{r.patronCode}">
+            <x:validatePatron />
+        </h:inputText>
+         <h:message for="p" errorClass="c1" />
+         </h:panelGroup>
+        <h:outputText value="" />
+        <h:commandButton action="ok" value="OK">
+            <f:actionListener type="org.demo.pt.postage.RequestValidatingListener"/>
+        </h:commandButton>
+    </h:panelGrid>
+</h:form>
+</body>
+</html>

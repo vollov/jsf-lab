@@ -28,22 +28,20 @@ catalina.bat jpda start
       </resource-bundle>
    </application>
      ======================    
-         
-         
-   <!-- 
-<h:form>
-    <h:inputText value="#{b1.sym}" required="true" label="Stock symbol"
-        requiredMessage="Input is missing!">
-    </h:inputText>
-    
- 
-    on 
-    <h:inputText value="#{b1.quoteDate}" required="true"
-        label="Quote date" converterMessage="The quote date is invalid">
-        <f:convertDateTime dateStyle="short" />
-    </h:inputText>
+         <!-- 
 
-     
-    <h:commandButton action="ok" value="Submit query"></h:commandButton>
-</h:form>
-     -->
+   <navigation-rule>
+      <from-view-id>home.xhtml</from-view-id>
+      <navigation-case>
+         <from-action>#{navigationController.processPage1}</from-action>
+         <from-outcome>page</from-outcome>
+         <to-view-id>page1.jsf</to-view-id>
+      </navigation-case>
+      <navigation-case>
+         <from-action>#{navigationController.processPage2}</from-action>
+         <from-outcome>page</from-outcome>
+         <to-view-id>page2.jsf</to-view-id>
+      </navigation-case>
+   </navigation-rule>
+ --> 
+         

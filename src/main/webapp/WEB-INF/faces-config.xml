@@ -5,33 +5,17 @@
         http://java.sun.com/xml/ns/javaee
         http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">
 
-<!-- 
+	<application>
+		<message-bundle>appmessages</message-bundle>
+		<message-bundle>Postage</message-bundle>
+		<locale-config>
+			<default-locale>en</default-locale>
+			<supported-locale>fr</supported-locale>
+			<supported-locale>de</supported-locale>
+			<supported-locale>zh</supported-locale>
+		</locale-config>
+	</application>
 
-   <navigation-rule>
-      <from-view-id>home.xhtml</from-view-id>
-      <navigation-case>
-         <from-action>#{navigationController.processPage1}</from-action>
-         <from-outcome>page</from-outcome>
-         <to-view-id>page1.jsf</to-view-id>
-      </navigation-case>
-      <navigation-case>
-         <from-action>#{navigationController.processPage2}</from-action>
-         <from-outcome>page</from-outcome>
-         <to-view-id>page2.jsf</to-view-id>
-      </navigation-case>
-   </navigation-rule>
- -->   
-    <application>
-        <message-bundle>org.demo.pt.stock.web.messages</message-bundle>
-        <locale-config>
-            <default-locale>en</default-locale>
-            <supported-locale>fr</supported-locale>
-            <supported-locale>de</supported-locale>
-            <supported-locale>zh</supported-locale>
-        </locale-config>
-    </application>
-
-    
 	<navigation-rule>
 		<from-view-id>/home.xhtml</from-view-id>
 		<navigation-case>
@@ -45,12 +29,25 @@
 			<to-view-id>/views/login.jsf</to-view-id>
 		</navigation-case>
 	</navigation-rule>
-	
-    <navigation-rule>
-        <from-view-id>/stock/getsymbol.xhtml</from-view-id>
-        <navigation-case>
-            <from-outcome>ok</from-outcome>
-            <to-view-id>/stock/stockvalue.xhtml</to-view-id>
-        </navigation-case>
-    </navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/stock/getsymbol.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>ok</from-outcome>
+			<to-view-id>/stock/stockvalue.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/postage/getrequest.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>ok</from-outcome>
+			<to-view-id>/postage/showpostage.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<validator>
+		<validator-id>foo.v1</validator-id>
+		<validator-class>org.demo.pt.postage.PatronValidator</validator-class>
+	</validator>
 </faces-config>

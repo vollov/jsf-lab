@@ -3,13 +3,12 @@
 	<classpathentry including="**/*.java" kind="src" output="target/test-classes" path="src/test/java"/>
 	<classpathentry kind="src" path="src/main/webapp"/>
 	<classpathentry including="**/*.java" kind="src" path="src/main/java"/>
+	<classpathentry excluding="**/*.java" kind="src" path="src/main/resources"/>
+	<classpathentry kind="var" path="M2_REPO/javax/servlet/jstl/1.2/jstl-1.2.jar" sourcepath="M2_REPO/javax/servlet/jstl/1.2/jstl-1.2-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/javax/el/el-api/2.2/el-api-2.2.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="var" path="M2_REPO/junit/junit/3.8.1/junit-3.8.1.jar" sourcepath="M2_REPO/junit/junit/3.8.1/junit-3.8.1-sources.jar"/>
-	<classpathentry kind="var" path="M2_REPO/com/sun/faces/jsf-api/2.1.7/jsf-api-2.1.7.jar"/>
-	<classpathentry kind="var" path="M2_REPO/com/sun/faces/jsf-impl/2.1.7/jsf-impl-2.1.7.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
-		<attributes>
-			<attribute name="owner.project.facets" value="java"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/sun/faces/jsf-api/2.1.7/jsf-api-2.1.7.jar" sourcepath="M2_REPO/com/sun/faces/jsf-api/2.1.7/jsf-api-2.1.7-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/sun/faces/jsf-impl/2.1.7/jsf-impl-2.1.7.jar" sourcepath="M2_REPO/com/sun/faces/jsf-impl/2.1.7/jsf-impl-2.1.7-sources.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

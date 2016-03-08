@@ -1,20 +1,29 @@
 package org.demo.pt.stock.web;
 
+import java.util.Date;
+
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.RequestScoped;
 
 @ManagedBean(name = "b1")
 @RequestScoped
 public class QuoteRequest {
     private String sym = "MSFT";
-//    private Date quoteDate = new Date();
-    
+    private Date quoteDate = new Date();
 
-    //@ManagedProperty(value = "#{param.pageId}") stockValue
-//    @ManagedProperty(value = "#{b2}")
-//    private StockService stkSrv; 
+    @ManagedProperty(value = "#{b2}")
+    private StockService stkSrv; 
 
-    public QuoteRequest() {
+    public StockService getStkSrv() {
+		return stkSrv;
+	}
+
+	public void setStkSrv(StockService stkSrv) {
+		this.stkSrv = stkSrv;
+	}
+
+	public QuoteRequest() {
         System.out.println("Creating b1");
     }
     
@@ -28,13 +37,13 @@ public class QuoteRequest {
         this.sym = sym;
     }
 
-//    public Date getQuoteDate() {
-//        return quoteDate;
-//    }
-//
-//    public void setQuoteDate(Date quoteDate) {
-//        this.quoteDate = quoteDate;
-//    }
+    public Date getQuoteDate() {
+        return quoteDate;
+    }
+
+    public void setQuoteDate(Date quoteDate) {
+        this.quoteDate = quoteDate;
+    }
 
     public int getStockValue() {
     	return Math.abs(sym.hashCode());

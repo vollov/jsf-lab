@@ -17,11 +17,25 @@
       
 <h:messages />
 
+
+   <!-- <h:inputText value="#{b1.sym}" required="true" label="Stock symbol"
+        requiredMessage="Input is missing!"> converterMessage="The quote date is invalid" --> 
 <h:form>
-	<h:inputText value="#{b1.sym}" required="true" label="Stock symbol"></h:inputText>
+   <!-- <h:inputText value="#{b1.sym}" required="true" label="Stock symbol"></h:inputText> --> 
+    
+    <h:selectOneMenu value="#{b1.sym}" required="true" label="Stock symbol">
+<f:selectItems value="#{b2.symbols}"/>
+</h:selectOneMenu>
 
-	<h:commandButton action="ok" value="Submit query"></h:commandButton>
+    on 
+    <h:inputText value="#{b1.quoteDate}" required="true"
+        label="Quote date" >
+        <f:convertDateTime dateStyle="short" />
+    </h:inputText>
+
+     
+    <h:commandButton action="ok" value="Submit query"></h:commandButton>
 </h:form>
-
+     
 </body>
 </html>
