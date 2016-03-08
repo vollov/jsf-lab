@@ -18,26 +18,10 @@
 <h:messages />
 
 <h:form>
-	<h:inputText value="#{b1.sym}"></h:inputText>
+	<h:inputText value="#{b1.sym}" required="true" label="Stock symbol"></h:inputText>
+
 	<h:commandButton action="ok" value="Submit query"></h:commandButton>
 </h:form>
 
-   <!-- 
-<h:form>
-    <h:inputText value="#{b1.sym}" required="true" label="Stock symbol"
-        requiredMessage="Input is missing!">
-    </h:inputText>
-    
- 
-    on 
-    <h:inputText value="#{b1.quoteDate}" required="true"
-        label="Quote date" converterMessage="The quote date is invalid">
-        <f:convertDateTime dateStyle="short" />
-    </h:inputText>
-
-     
-    <h:commandButton action="ok" value="Submit query"></h:commandButton>
-</h:form>
-     -->
 </body>
 </html>

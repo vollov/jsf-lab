@@ -21,7 +21,17 @@
       </navigation-case>
    </navigation-rule>
  -->   
+    <application>
+        <message-bundle>org.demo.pt.stock.web.messages</message-bundle>
+        <locale-config>
+            <default-locale>en</default-locale>
+            <supported-locale>fr</supported-locale>
+            <supported-locale>de</supported-locale>
+            <supported-locale>zh</supported-locale>
+        </locale-config>
+    </application>
 
+    
 	<navigation-rule>
 		<from-view-id>/home.xhtml</from-view-id>
 		<navigation-case>
@@ -37,10 +47,10 @@
 	</navigation-rule>
 	
     <navigation-rule>
-        <from-view-id>/getsymbol.xhtml</from-view-id>
+        <from-view-id>/stock/getsymbol.xhtml</from-view-id>
         <navigation-case>
             <from-outcome>ok</from-outcome>
-            <to-view-id>/stockvalue.xhtml</to-view-id>
+            <to-view-id>/stock/stockvalue.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
 </faces-config>
