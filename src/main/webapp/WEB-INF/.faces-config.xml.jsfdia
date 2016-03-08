@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#views#login.jsf" PATH="/views/login.jsf"
+  SHAPE="256,289,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#home.xhtml" PATH="/home.xhtml"
+  SHAPE="32,129,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#home.xhtml:0" NAME="item" PATH="/home.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="success:#{navigationController.showPage}:#views#inbox.jsf"
+    NAME="output" PATH="/views/inbox.jsf"
+    TARGET="rules:#views#inbox.jsf"
+    TITLE="#{navigationController.showPage}:success" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="failure:#{navigationController.showPage}:#views#login.jsf"
+    NAME="output1" PATH="/views/login.jsf"
+    TARGET="rules:#views#login.jsf"
+    TITLE="#{navigationController.showPage}:failure" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#views#inbox.jsf" PATH="/views/inbox.jsf"
+  SHAPE="256,145,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#getsymbol.xhtml" PATH="/getsymbol.xhtml"
+  SHAPE="32,385,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#getsymbol.xhtml:0" NAME="item"
+   PATH="/getsymbol.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="ok::#stockvalue.xhtml" NAME="output"
+    PATH="/stockvalue.xhtml" TARGET="rules:#stockvalue.xhtml" TITLE="ok" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#stockvalue.xhtml" PATH="/stockvalue.xhtml"
+  SHAPE="240,401,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>

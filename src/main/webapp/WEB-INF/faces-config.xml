@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config version="2.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://java.sun.com/xml/ns/javaee
+        http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">
+
+<!-- 
+
+   <navigation-rule>
+      <from-view-id>home.xhtml</from-view-id>
+      <navigation-case>
+         <from-action>#{navigationController.processPage1}</from-action>
+         <from-outcome>page</from-outcome>
+         <to-view-id>page1.jsf</to-view-id>
+      </navigation-case>
+      <navigation-case>
+         <from-action>#{navigationController.processPage2}</from-action>
+         <from-outcome>page</from-outcome>
+         <to-view-id>page2.jsf</to-view-id>
+      </navigation-case>
+   </navigation-rule>
+ -->   
+
+	<navigation-rule>
+		<from-view-id>/home.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{navigationController.showPage}</from-action>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/views/inbox.jsf</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{navigationController.showPage}</from-action>
+			<from-outcome>failure</from-outcome>
+			<to-view-id>/views/login.jsf</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+    <navigation-rule>
+        <from-view-id>/getsymbol.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>ok</from-outcome>
+            <to-view-id>/stockvalue.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+</faces-config>
