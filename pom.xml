@@ -8,6 +8,13 @@
 	<version>1.0-SNAPSHOT</version>
 	<name>project track web app</name>
 	<url>http://maven.apache.org</url>
+	
+	<properties>
+		<jboss.id>jboss7.1.1</jboss.id>
+		<version.jboss.maven.plugin>7.7.Final</version.jboss.maven.plugin>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -42,7 +49,35 @@
 	</dependencies>
 	<build>
 		<finalName>jsf-lab</finalName>
-		<plugins>
+			<plugins>
+				<plugin>
+				<groupId>org.jboss.as.plugins</groupId>
+				<artifactId>jboss-as-maven-plugin</artifactId>
+				<version>${version.jboss.maven.plugin}</version>
+				<configuration>
+					<force>true</force>
+					<id>${jboss.id}</id>
+					<!-- 
+					<hostname>${jboss-as.deploy.hostname}</hostname>
+					<username>${jboss-as.deploy.user}</username>
+					<password>${jboss-as.deploy.pass.prod}</password>
+					 -->
+					<fileNames>
+						<fileName>target/${plugin.war.warName}.war</fileName>
+					</fileNames>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>install</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+						<configuration>
+							<deployEnabled>true</deployEnabled>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
